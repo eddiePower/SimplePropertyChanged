@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimplePropertyChanged"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="A Simple OnPropertyChanged Demo" Height="380.737" Width="532.932">
+    <Grid Background="{Binding Background.Colour}">
+        <DockPanel LastChildFill="False">
+            <StackPanel Width="250" DockPanel.Dock="Top">
+
+                <TextBlock Text="{Binding Person.Name, StringFormat=Welcome Mr {0}}" FontSize="22" Height="41" />
+                <TextBox Text="{Binding Person.Name, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" FontSize="24" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <Button Click="Red_Clicked" Content="Moroone Background" Height="53" Width="164"/>
+                <Button Click="Blue_Clicked" Content="SkyBlue Background" Height="53" Width="169"/>
+                <Button Click="Yellow_Clicked" Content="Beige Background" Height="53" Width="187"/>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>

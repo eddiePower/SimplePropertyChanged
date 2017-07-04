@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimplePropertyChanged.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,26 @@ namespace SimplePropertyChanged
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel _main = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = _main;
+        }
+
+        private void Red_Clicked(object sender, RoutedEventArgs e)
+        {
+            _main.SetBackground(Brushes.Maroon);
+        }
+
+        private void Blue_Clicked(object sender, RoutedEventArgs e)
+        {
+            _main.SetBackground(Brushes.SkyBlue);
+        }
+        private void Yellow_Clicked(object sender, RoutedEventArgs e)
+        {
+            _main.SetBackground(Brushes.Beige);
         }
     }
 }
