@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:SimplePropertyChanged"
         mc:Ignorable="d"
         Title="A Simple OnPropertyChanged Demo" Height="380.737" Width="532.932">
-    <Grid Background="{Binding Background.Colour}">
+    <Grid Background="{Binding Background.Colour}" TextBlock.Foreground="{Binding Background.ForColour}" Margin="0,2,0,-2">
         <DockPanel LastChildFill="False">
             <StackPanel Width="250" DockPanel.Dock="Top">
-
-                <TextBlock Text="{Binding Person.Name, StringFormat=Welcome Mr {0}}" FontSize="22" Height="41" />
+                <TextBlock Text="{Binding Person.Name, StringFormat=Welcome\, {0}}" FontSize="22" Height="41" />
                 <TextBox Text="{Binding Person.Name, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" FontSize="24" />
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" DockPanel.Dock="Bottom">

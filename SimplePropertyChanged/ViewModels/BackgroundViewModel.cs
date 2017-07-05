@@ -10,6 +10,23 @@ namespace SimplePropertyChanged.ViewModels
     public class BackgroundViewModel : ObservableObject
     {
         private Brush _colour;
+        private Brush _forColour;
+
+        public Brush ForColour
+        {
+            get
+            {
+                if (_forColour == null)
+                    return Brushes.Black;
+                return _forColour;
+            }
+            set
+            {
+                if (_forColour == value) return;
+                _forColour = value;
+                OnPropertyChanged("ForColour");
+            }
+        }
 
         public Brush Colour
         {

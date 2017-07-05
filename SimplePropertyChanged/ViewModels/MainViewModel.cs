@@ -23,7 +23,17 @@ namespace SimplePropertyChanged.ViewModels
         public void SetBackground(Brush brushColour)
         {
             if (Background.Colour == brushColour) return;
+
             Background.Colour = brushColour;
+
+            if (Background.Colour == Brushes.Beige)
+            {
+                Background.ForColour = Brushes.Black;
+            }
+            else
+            {
+               Background.ForColour = Brushes.White;
+            }
         }
     }
 }
