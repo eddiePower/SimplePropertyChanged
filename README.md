@@ -5,6 +5,5 @@ It is a simple UI with a textbox for input and a textBlock for output there are 
 UI, it uses the INotifyPropertyChanged functionality of Visual C#.
 <br />
 Toskers YouTube Channel : https://www.youtube.com/channel/UCXZWxO7EUC0ZSoeZIR2V9UQ <br />
-Toskers Blog: http://www.toskerscorner.com/
 
 All code is from the tutorial mentioned above and all credit goes to Tosker for his great tutorials.
